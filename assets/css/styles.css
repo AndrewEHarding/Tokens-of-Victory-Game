@@ -16,7 +16,11 @@ header {
     color: aliceblue;
 }
 
-div {
+li {
+    display: inline;
+}
+
+.my-container {
     background-color: rgba(0, 0, 0, 0.75);
     color: aliceblue;
     margin: 5px;

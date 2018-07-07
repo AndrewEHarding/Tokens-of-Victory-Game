@@ -21,50 +21,71 @@
         <h4>A Dark Souls Themed Collector Game</h4>
     </header>
 
-    <!-- =====GAME RULES===== -->
-    <div>
-        <p>
-            The game begins with a random number of Proofs of a Concord you need to collect.
-            <br>
-            <br> There are four covenants you can join, each will grant you a random number of Proofs to add to your collection.
-            <br>
-            <br> Your goal to collect the exact amount of Proofs that have been shown.
-            <br>
-            <br> Be careful. If you collect too many Proofs, you'll be the target of Dark Phantoms, and you'll loose.
-            <br>
-            <br> Your Wins and Losses are tallied at the end of each game. And when the game resets all covenant values and your
-            target collection will change.
-        </p>
-        <!-- If you have no idea what any of this means, just ask Scott, he can explain it all. -->
+    <div class="row">
+        <!-- =====GAME RULES===== -->
+        <div class="my-container col">
+            <p>
+                The game begins with a random number of Proofs of a Concord you need to collect.
+                <br>
+                <br> There are four covenants you can join, each will grant you a random number of Proofs to add to your collection.
+                <br>
+                <br> Your goal to collect the exact same amount of Proofs as your target.
+                <br>
+                <br> Be careful. If you collect too many Proofs, you'll be the target of Dark Phantoms, and you'll loose.
+                <br>
+                <br> Your Wins and Losses are tallied at the end of each game. When the game resets all covenant values and your
+                target value will change.
+                <!-- If you have no idea what any of this means, just ask Scott, he can explain it all. -->
+            </p>
+
+        </div>
+        <div class="col">
+            <!-- =====COVENANTS===== -->
+            <div class="my-container">
+                <div class="row">
+                    <div class="col text-center">
+                        <img id="cov-1" src="./assets/images/blade_of_the_darkmoon.png" alt="Blade of the Darkmoon" />
+                    </div>
+                    <div class="col text-center">
+                        <img id="cov-2" src="./assets/images/rosarias_fingers.png" alt="Rosarias Fingers" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <img id="cov-3" src="./assets/images/warrior_of_sunlight.png" alt="Warrior of Sunlight" />
+                    </div>
+                    <div class="col text-center">
+                        <img id="cov-4" src="./assets/images/watchdogs_of_farron.png" alt="Watchdogs of Farron" />
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- =====TARGET NUMBER===== -->
-    <div id="target-number"></div>
+    <div class="row">
+        <!-- =====CURRENT SCORE===== -->
+        <div class="my-container col">
+            <h4>Your Collected Proofs:</h4>
+            <h3 id="current-score"></h3>
+        </div>
 
-    <!-- =====WIN/LOSS COUNTERS===== -->
-    <div>
-        <ul>
-            <li>Victories:
-                <h5 id="win-counter"></h5>
-            </li>
-            <li>Deaths:
-                <h5 id="loss-counter"></h5>
-            </li>
-        </ul>
-    </div>
+        <!-- =====TARGET NUMBER===== -->
+        <div class="my-container col">
+            <h4>Your Target:</h4>
+            <h3 id="target-number"></h3>
+        </div>
 
-    <!-- =====COVENANTS===== -->
-    <div>
-        <img id="cov-1" src="./assets/images/blade_of_the_darkmoon.png" alt="Blade of the Darkmoon" />
-        <img id="cov-2" src="./assets/images/rosarias_fingers.png" alt="Rosarias Fingers" />
-        <img id="cov-3" src="./assets/images/warrior_of_sunlight.png" alt="Warrior of Sunlight" />
-        <img id="cov-4" src="./assets/images/watchdogs_of_farron.png" alt="Watchdogs of Farron" />
-    </div>
-
-    <!-- =====CURRENT SCORE===== -->
-    <div>
-        <h4>Your Collected Proofs:</h4>
-        <h3 id="current-score"></h3>
+        <!-- =====WIN/LOSS COUNTERS===== -->
+        <div class="my-container col">
+            <ul>
+                <li>Victories:
+                    <h5 id="win-counter"></h5>
+                </li>
+                <li>Deaths:
+                    <h5 id="loss-counter"></h5>
+                </li>
+            </ul>
+        </div>
     </div>
 
 </body>
