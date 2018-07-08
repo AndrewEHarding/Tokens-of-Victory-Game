@@ -15,12 +15,10 @@
 </head>
 
 <body class="container">
-
     <header class="header text-center">
         <h1>Tokens of Victory</h1>
         <h4>A Dark Souls Themed Collector Game</h4>
     </header>
-
     <div class="row">
         <!-- =====GAME RULES===== -->
         <div class="my-container col">
@@ -37,44 +35,40 @@
                 target value will change.
                 <!-- If you have no idea what any of this means, just ask Scott, he can explain it all. -->
             </p>
-
         </div>
         <div class="col">
             <!-- =====COVENANTS===== -->
             <div class="my-container">
                 <div class="row">
                     <div class="col text-center">
-                        <img id="cov-1" src="./assets/images/blade_of_the_darkmoon.png" alt="Blade of the Darkmoon" />
+                        <img class="cov-button" id="cov-1" src="./assets/images/blade_of_the_darkmoon.png" alt="Blade of the Darkmoon" value="" />
                     </div>
                     <div class="col text-center">
-                        <img id="cov-2" src="./assets/images/rosarias_fingers.png" alt="Rosarias Fingers" />
+                        <img class="cov-button" id="cov-2" src="./assets/images/rosarias_fingers.png" alt="Rosarias Fingers" value="" />
                     </div>
                 </div>
                 <div class="row">
                     <div class="col text-center">
-                        <img id="cov-3" src="./assets/images/warrior_of_sunlight.png" alt="Warrior of Sunlight" />
+                        <img class="cov-button" id="cov-3" src="./assets/images/warrior_of_sunlight.png" alt="Warrior of Sunlight" value="" />
                     </div>
                     <div class="col text-center">
-                        <img id="cov-4" src="./assets/images/watchdogs_of_farron.png" alt="Watchdogs of Farron" />
+                        <img class="cov-button" id="cov-4" src="./assets/images/watchdogs_of_farron.png" alt="Watchdogs of Farron" value="" />
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="row">
         <!-- =====CURRENT SCORE===== -->
         <div class="my-container col">
             <h4>Your Collected Tokens:</h4>
             <h3 id="current-score"></h3>
         </div>
-
         <!-- =====TARGET NUMBER===== -->
         <div class="my-container col">
             <h4>Your Target:</h4>
             <h3 id="target-number"></h3>
         </div>
-
         <!-- =====WIN/LOSS COUNTERS===== -->
         <div class="my-container col">
             <ul>
@@ -87,7 +81,6 @@
             </ul>
         </div>
     </div>
-
 </body>
 
 </html>
