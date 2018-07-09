@@ -30,40 +30,7 @@ $(document).ready(function () {
 
 
     // =====GAME OBJECT=====
-    var gameFunction = function () {
-
-        // =====NEW GAME=====
-        this.newGame = function () {
-            targetNumber = Math.floor(Math.random() * 101 + 19);
-            $("target-number").text(targetNumber);
-            currentScore = 0;
-            $("current-score").text(currentScore);
-            cov1 = Math.floor(Math.random()*11 + 1);
-            cov2 = Math.floor(Math.random()*11 + 1);
-            cov3 = Math.floor(Math.random()*11 + 1);
-            cov4 = Math.floor(Math.random()*11 + 1);
-            //Find a way to push the random numbers to the img value attributes
-        }
-
-        // =====CHECK WIN=====
-        this.checkWin = function () {
-            if (currentScore == targetNumber) {
-                alert("Victory Achieved");
-                winCounter++;
-                $("#win-counter").text(winCounter);
-                this.newGame();
-            }
-
-            else if (currentScore > targetNumber) {
-                alert("You Died");
-                lossCounter++;
-                $("#loss-counter").text(lossCounter);
-                this.newGame();
-            }
-        }
-
-    }
-    var gameObject = gameFunction({});
+    var gameObject = new Game();
 
     gameObject.newGame();
 
@@ -76,3 +43,42 @@ $(document).ready(function () {
     });
 
 });
+
+function Game(){
+    var self = this;
+
+    self.newGame = function(){
+        console.log("New Game Created!!")
+        targetNumber = Math.floor(Math.random() * 101 + 19);
+        $("target-number").text(targetNumber);
+        currentScore = 0;
+        $("current-score").text(currentScore);
+        $('#cov-1').val(Math.floor(Math.random()*11 + 1));
+        $('#cov-2').val(Math.floor(Math.random()*11 + 1));
+        $('#cov-3').val(Math.floor(Math.random()*11 + 1));
+        $('#cov-4').val(Math.floor(Math.random()*11 + 1));
+        //Find a way to push the random numbers to the img value attributes
+        console.log('cov-1 ' + $('#cov-1').val());
+        console.log('cov-2 ' + $('#cov-2').val());
+        console.log('cov-3 ' + $('#cov-3').val());
+        console.log('cov-4 ' + $('#cov-4').val());
+    }
+
+    self.checkWin = function(){
+        if (currentScore == targetNumber) {
+            alert("Victory Achieved");
+            winCounter++;
+            $("#win-counter").text(winCounter);
+            self.newGame();
+        }
+
+        else if (currentScore > targetNumber) {
+            alert("You Died");
+            lossCounter++;
+            $("#loss-counter").text(lossCounter);
+            self.newGame();
+        }
+    }
+}
+
+
