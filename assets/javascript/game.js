@@ -5,6 +5,7 @@ $(document).ready(function () {
     var lossCounter = 0;
     var targetNumber = 0;
     var currentScore = 0;
+    var blackPhantoms = ["Maneater Mildred", "Xanthous King Jeremiah", "Kirk, Knight of Thorns", "Paladin Leeroy", "Marvelous Chester"];
 
     // =====GAME OBJECT=====
     function Game() {
@@ -42,7 +43,7 @@ $(document).ready(function () {
             }
 
             else if (currentScore > targetNumber) {
-                alert("You Died");
+                alert("Dark spirit " + blackPhantoms[Math.floor(Math.random()* blackPhantoms.length)] + " has invaded!\nYou Died");
                 lossCounter++;
                 $("#loss-counter").text(lossCounter);
                 self.newGame();
