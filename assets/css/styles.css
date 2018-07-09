@@ -1,3 +1,11 @@
+@font-face {
+    font-family: Optimus Princeps; src: url(../optimusprinceps/OptimusPrinceps.ttf);
+}
+
+@font-face {
+    font-family: Optimus Princeps; font-weight: bold; src: url(../optimusprinceps/OptimusPrincepsSemiBold.ttf);
+}
+
 body {
     background-image: url(../images/background-img.jpg);
     background-repeat: repeat;
@@ -7,8 +15,15 @@ body {
 
 }
 
+p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14pt;
+}
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Optimus Princeps;
+    font-weight: bold;
+
 }
 
 header {
@@ -31,10 +46,11 @@ li {
 
 #cov-1, #cov-2, #cov-3, #cov-4 {
     max-width: 125px;
+    opacity: .65;
 }
 
 #cov-1:hover, #cov-2:hover, #cov-3:hover, #cov-4:hover {
-    
+    opacity: 1;
 }
 
 #win-counter {
@@ -43,4 +59,13 @@ li {
 
 #loss-counter {
     text-shadow: 1px 1px 10px red;
+}
+
+#humanity {
+    text-shadow: 1px 1px 10px aliceblue;
+    box-shadow: 0px 0px 5px aliceblue;
+    border: 2px aliceblue solid;
+    border-radius: 80%;
+    margin-left: 22px;
+    margin-right: 22px;
 }

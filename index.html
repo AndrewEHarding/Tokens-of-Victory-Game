@@ -15,10 +15,13 @@
 </head>
 
 <body class="container">
+
+    <!-- =====HEADER===== -->
     <header class="header text-center p-3">
         <h1>Tokens of Victory</h1>
         <h4>A Dark Souls Themed Collector Game</h4>
     </header>
+
     <div class="row">
         <!-- =====GAME RULES===== -->
         <div class="my-container col">
@@ -36,50 +39,58 @@
                 <!-- If you have no idea what any of this means, just ask Scott, he can explain it all. -->
             </p>
         </div>
-        <div class="col">
-            <!-- =====COVENANTS===== -->
-            <div class="my-container">
-                <div class="row">
-                    <div class="col text-center">
-                        <img class="cov-button" id="cov-1" src="./assets/images/blade_of_the_darkmoon.png" alt="Blade of the Darkmoon" value="" />
-                    </div>
-                    <div class="col text-center">
-                        <img class="cov-button" id="cov-2" src="./assets/images/rosarias_fingers.png" alt="Rosarias Fingers" value="" />
-                    </div>
+
+        <!-- =====COVENANTS===== -->
+        <div class="my-container col">
+            <div class="row">
+                <div class="col text-center">
+                    <img class="cov-button" id="cov-1" src="./assets/images/blade_of_the_darkmoon.png" alt="Blade of the Darkmoon" value="" />
                 </div>
-                <div class="row">
-                    <div class="col text-center">
-                        <img class="cov-button" id="cov-3" src="./assets/images/warrior_of_sunlight.png" alt="Warrior of Sunlight" value="" />
-                    </div>
-                    <div class="col text-center">
-                        <img class="cov-button" id="cov-4" src="./assets/images/watchdogs_of_farron.png" alt="Watchdogs of Farron" value="" />
-                    </div>
+                <div class="col text-center">
+                    <img class="cov-button" id="cov-2" src="./assets/images/rosarias_fingers.png" alt="Rosarias Fingers" value="" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <img class="cov-button" id="cov-3" src="./assets/images/warrior_of_sunlight.png" alt="Warrior of Sunlight" value="" />
+                </div>
+                <div class="col text-center">
+                    <img class="cov-button" id="cov-4" src="./assets/images/watchdogs_of_farron.png" alt="Watchdogs of Farron" value="" />
                 </div>
             </div>
         </div>
     </div>
+
     <div class="row">
+
         <!-- =====CURRENT SCORE===== -->
         <div class="my-container col text-center">
             <h4>Your Collected Tokens:</h4>
             <h2 id="current-score"></h2>
         </div>
+
         <!-- =====TARGET NUMBER===== -->
         <div class="my-container col text-center">
             <h4>Your Target:</h4>
             <h2 id="target-number"></h2>
         </div>
+
         <!-- =====WIN/LOSS COUNTERS===== -->
         <div class="my-container col text-center">
-            <ul class="list-inline">
-                <li class="list-inline-item">Victories:
+            <ul class="list-inline mb-0">
+                <li class="list-inline-item mx-3"><h6>Victories:</h6>
                     <h2 id="win-counter"></h2>
                 </li>
-                <li class="list-inline-item">Deaths:
+                <li class="list-inline-item mx-3"><h6>Deaths:</h6>
                     <h2 id="loss-counter"></h2>
+                </li>
+                <li class="list-inline-item mx-3"><h6>Humanity:</h6>
+                    <h2 id="humanity">00</h2>
+                    <!-- This is a Dark Souls reference. Trust me, it's hilarious. -->
                 </li>
             </ul>
         </div>
+
     </div>
 </body>
 
