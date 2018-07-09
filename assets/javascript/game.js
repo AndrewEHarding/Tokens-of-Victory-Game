@@ -1,5 +1,3 @@
-// Your rhinestone eyes are like factories far away
-
 // id list:
 // target-number
 // win-counter
@@ -34,6 +32,8 @@ $(document).ready(function () {
 
         // =====NEW GAME=====
         this.newGame = function () {
+            $("#win-counter").text(winCounter);
+            $("loss-counter").text(lossCounter);
             targetNumber = Math.floor(Math.random() * 101 + 19);
             $("target-number").text(targetNumber);
             currentScore = 0;
@@ -50,14 +50,14 @@ $(document).ready(function () {
             if (currentScore == targetNumber) {
                 alert("Victory Achieved");
                 winCounter++;
-                $("#win-counter").text(winCounter);
+                // $("#win-counter").text(winCounter); May be redundant
                 this.newGame();
             }
 
             else if (currentScore > targetNumber) {
                 alert("You Died");
                 lossCounter++;
-                $("#loss-counter").text(lossCounter);
+                // $("#loss-counter").text(lossCounter);
                 this.newGame();
             }
         }
@@ -67,6 +67,7 @@ $(document).ready(function () {
 
     gameObject.newGame();
 
+    // =====BUTTON CLICK=====
     $(".cov-button").on("click", function () {
         var addedTokens = $(this).attr("value"); // Make sure this is taking the value attribute from the cov that was clicked
         currentScore = currentScore + addedTokens;
