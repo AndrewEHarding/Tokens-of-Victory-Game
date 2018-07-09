@@ -1,6 +1,6 @@
 body {
     background-image: url(../images/background-img.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: left top;
     background-attachment: fixed;
     background-color: black;
@@ -35,4 +35,12 @@ li {
 
 #cov-1:hover, #cov-2:hover, #cov-3:hover, #cov-4:hover {
     
+}
+
+#win-counter {
+    text-shadow: 1px 1px 10px gold;
+}
+
+#loss-counter {
+    text-shadow: 1px 1px 10px red;
 }
