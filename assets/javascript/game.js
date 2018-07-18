@@ -5,6 +5,8 @@ $(document).ready(function () {
     var lossCounter = 0;
     var targetNumber = 0;
     var currentScore = 0;
+    var humanityScore = 0;
+    var humanityDisplay;
     var blackPhantoms = ["Maneater Mildred", "Xanthous King Jeremiah", "Kirk, Knight of Thorns", "Paladin Leeroy", "Marvelous Chester"];
 
     // =====GAME OBJECT=====
@@ -39,14 +41,35 @@ $(document).ready(function () {
                 alert("Victory Achieved");
                 winCounter++;
                 $("#win-counter").text(winCounter);
+                humanityScore++;
+                self.convertHumanity();
+                $("#humanity").text(humanityDisplay);
                 self.newGame();
             }
 
             else if (currentScore > targetNumber) {
-                alert("Dark spirit " + blackPhantoms[Math.floor(Math.random()* blackPhantoms.length)] + " has invaded!\nYou Died");
+                alert("Dark spirit " + blackPhantoms[Math.floor(Math.random() * blackPhantoms.length)] + " has invaded!\nYou Died");
                 lossCounter++;
                 $("#loss-counter").text(lossCounter);
+                humanityScore = 0;
+                self.convertHumanity();
+                $("#humanity").text(humanityDisplay);
                 self.newGame();
+            }
+        }
+
+        // =====CONVERT HUMANITY=====
+        self.convertHumanity = function () {
+            if (humanityScore < 10) {
+                humanityDisplay = "0" + humanityScore;
+            }
+
+            else if (humanityScore > 99) {
+                humanityDisplay = "99";
+            }
+
+            else {
+                humanityDisplay = humanityScore;
             }
         }
     }
